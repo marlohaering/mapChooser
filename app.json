@@ -1,0 +1,6 @@
+{
+    "name": "mapChooser",
+    "description": "App to choose the map service for location",
+    "repository": "",
+    "keywords": ["flask", "heroku"]
+  }

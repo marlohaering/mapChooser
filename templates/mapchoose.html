@@ -1,0 +1,130 @@
+<html>
+
+<style>
+    .container {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: (1fr)[2];
+          grid-template-rows: repeat(2, 1fr);
+      -ms-grid-columns: (1fr)[4];
+          grid-template-columns: repeat(4, 1fr);
+      width: 100vw;
+      height: 100vh;
+    }
+    
+    @media screen and (max-width: 60em) {
+      .container {
+        -ms-grid-rows: (1fr)[4];
+            grid-template-rows: repeat(4, 1fr);
+      }
+    }
+    
+    .grid-1 {
+      -ms-grid-column: 1;
+          grid-column-start: 1;
+      grid-column-end: 3;
+      -ms-grid-row: 1;
+          grid-row: 1;
+    }
+    
+    @media screen and (max-width: 60em) {
+      .grid-1 {
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 1;
+            grid-row: 1;
+      }
+    }
+    
+    .grid-2 {
+      -ms-grid-column: 3;
+          grid-column-start: 3;
+      grid-column-end: 5;
+      -ms-grid-row: 1;
+          grid-row: 1;
+    }
+    
+    @media screen and (max-width: 60em) {
+      .grid-2 {
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 2;
+            grid-row: 2;
+      }
+    }
+    
+    .grid-3 {
+      -ms-grid-column: 1;
+          grid-column-start: 1;
+      grid-column-end: 3;
+      -ms-grid-row: 2;
+          grid-row: 2;
+    }
+    
+    @media screen and (max-width: 60em) {
+      .grid-3 {
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 3;
+            grid-row: 3;
+      }
+    }
+    
+    .grid-4 {
+      -ms-grid-column: 3;
+          grid-column-start: 3;
+      grid-column-end: 5;
+      -ms-grid-row: 2;
+          grid-row: 2;
+    }
+    
+    @media screen and (max-width: 60em) {
+      .grid-4 {
+        -ms-grid-column: 1;
+            grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 4;
+            grid-row: 4;
+      }
+    }
+
+    a {
+        display: block
+    }
+    
+    .callout {
+      margin: 0;
+    }
+    
+    </style>
+
+    <div class="container">
+        <div class="grid-1">
+            <a href="http://maps.google.com/maps?q={{longitude | safe}},{{latitude | safe}}">
+            <img width="100%" src="https://cdn.icon-icons.com/icons2/2108/PNG/512/google_maps_icon_130921.png" alt="">
+        </a>
+        </div>
+      
+        <div class="grid-2">
+            <a href="http://www.openstreetmap.org/?mlat={{longitude | safe}}&mlon={{latitude | safe}}&zoom=16">
+                <img width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/OpenStreetMap-Logo-2006.svg/768px-OpenStreetMap-Logo-2006.svg.png" alt="">
+            </a>
+                
+            
+        </div>
+      
+        <div class="grid-3">
+            <img width="100%" src="https://icon-library.com/images/google-maps-app-icon/google-maps-app-icon-8.jpg" alt="">
+        </div>
+      
+        <div class="grid-4">            
+            <img width="100%" src="https://news.thewindowsclub.com/wp-content/uploads/2020/10/Bing-Logo.png?ezimgfmt=ng:webp/ngcb181" alt="">            
+        </div>
+      </div>
+
+
+
+</html>
