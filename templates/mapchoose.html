@@ -1,133 +1,56 @@
 <html>
 
 <style>
-    .container {
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-rows: (1fr)[2];
-          grid-template-rows: repeat(2, 1fr);
-      -ms-grid-columns: (1fr)[4];
-          grid-template-columns: repeat(4, 1fr);
-      width: 100vw;
-      height: 100vh;
-    }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
     
-    @media screen and (max-width: 60em) {
-      .container {
-        -ms-grid-rows: (1fr)[4];
-            grid-template-rows: repeat(4, 1fr);
-      }
-    }
-    
-    .grid-1 {
-      -ms-grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 3;
-      -ms-grid-row: 1;
-          grid-row: 1;
-    }
-    
-    @media screen and (max-width: 60em) {
-      .grid-1 {
-        -ms-grid-column: 1;
-            grid-column-start: 1;
-        grid-column-end: 5;
-        -ms-grid-row: 1;
-            grid-row: 1;
-      }
-    }
-    
-    .grid-2 {
-      -ms-grid-column: 3;
-          grid-column-start: 3;
-      grid-column-end: 5;
-      -ms-grid-row: 1;
-          grid-row: 1;
-    }
-    
-    @media screen and (max-width: 60em) {
-      .grid-2 {
-        -ms-grid-column: 1;
-            grid-column-start: 1;
-        grid-column-end: 5;
-        -ms-grid-row: 2;
-            grid-row: 2;
-      }
-    }
-    
-    .grid-3 {
-      -ms-grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 3;
-      -ms-grid-row: 2;
-          grid-row: 2;
-    }
-    
-    @media screen and (max-width: 60em) {
-      .grid-3 {
-        -ms-grid-column: 1;
-            grid-column-start: 1;
-        grid-column-end: 5;
-        -ms-grid-row: 3;
-            grid-row: 3;
-      }
-    }
-    
-    .grid-4 {
-      -ms-grid-column: 3;
-          grid-column-start: 3;
-      grid-column-end: 5;
-      -ms-grid-row: 2;
-          grid-row: 2;
-    }
-    
-    @media screen and (max-width: 60em) {
-      .grid-4 {
-        -ms-grid-column: 1;
-            grid-column-start: 1;
-        grid-column-end: 5;
-        -ms-grid-row: 4;
-            grid-row: 4;
-      }
-    }
+    padding: 5px;
+  }
 
-    a {
-        display: block
-    }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
     
-    .callout {
-      margin: 0;
-    }
-    
-    </style>
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+</style>
 
-    <div class="container">
-        <div class="grid-1">
-            <a href="http://maps.google.com/maps?q={{longitude | safe}},{{latitude | safe}}">
-            <img width="100%" src="https://cdn.icon-icons.com/icons2/2108/PNG/512/google_maps_icon_130921.png" alt="">
-        </a>
-        </div>
-      
-        <div class="grid-2">
-            <a href="http://www.openstreetmap.org/?mlat={{longitude | safe}}&mlon={{latitude | safe}}&zoom=16">
-                <img width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/OpenStreetMap-Logo-2006.svg/768px-OpenStreetMap-Logo-2006.svg.png" alt="">
-            </a>
-                
-            
-        </div>
-      
-        <div class="grid-3">
-            <a href="https://duckduckgo.com/?q={{longitude | safe}}%2C+{{latitude | safe}}&ia=web&iaxm=maps">
-              <img width="100%" src="https://icon-library.com/images/google-maps-app-icon/google-maps-app-icon-8.jpg" alt="">
-            </a>
-        </div>
-      
-        <div class="grid-4">            
-            <a href="https://www.bing.com/maps?osid=6d4c2f92-7f19-405f-8a28-b168a6139e16&cp={{longitude | safe}}~{{latitude | safe}}&lvl=14&v=2&sV=2&form=S00027">
-              <img width="100%" src="https://news.thewindowsclub.com/wp-content/uploads/2020/10/Bing-Logo.png?ezimgfmt=ng:webp/ngcb181" alt="">
-            </a>
-        </div>
-      </div>
+<div class="grid-container">
+  <div class="grid-item">
+    <a href="http://maps.google.com/maps?q={{longitude | safe}},{{latitude | safe}}">
+      <img width="200px" src="https://cdn.icon-icons.com/icons2/2108/PNG/512/google_maps_icon_130921.png" alt="">
+    </a>
+  </div>
+
+  <div class="grid-item"><a
+      href="http://www.openstreetmap.org/?mlat={{longitude | safe}}&mlon={{latitude | safe}}&zoom=16">
+      <img width="200px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/OpenStreetMap-Logo-2006.svg/768px-OpenStreetMap-Logo-2006.svg.png"
+        alt="">
+    </a></div>
+  <div class="grid-item"><a
+      href="https://duckduckgo.com/?q={{longitude | safe}}%2C+{{latitude | safe}}&ia=web&iaxm=maps">
+      <img width="200px" src="https://icon-library.com/images/google-maps-app-icon/google-maps-app-icon-8.jpg" alt="">
+    </a></div>
+  <div class="grid-item"><a
+      href="https://www.bing.com/maps?osid=6d4c2f92-7f19-405f-8a28-b168a6139e16&cp={{longitude | safe}}~{{latitude | safe}}&lvl=14&v=2&sV=2&form=S00027">
+      <img width="200px"
+        src="https://news.thewindowsclub.com/wp-content/uploads/2020/10/Bing-Logo.png?ezimgfmt=ng:webp/ngcb181" alt="">
+    </a></div>
+  <div class="grid-item">
+    <a
+      href="magicearth://?lat={{latitude | safe}}&lon={{longitude | safe}}">
+      <img width="200px"
+        src="https://www.magicearth.com/wp-content/uploads/revslider/slider6/ME_Icon.png" alt="">
+    </a>
+  </div>
+  <div class="grid-item"> </div>
+  <div class="grid-item"> </div>
+  <div class="grid-item"> </div>
+  <div class="grid-item"> </div>
+</div>
 
 
 
