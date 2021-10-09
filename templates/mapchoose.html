@@ -1,4 +1,48 @@
 <html>
+<head>
+<title>Map Chooser</title>
+<meta name="description" content="Choose the maps service you want to see the location">
+<meta name="keywords" content="maps location latitude longitude">
+<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = 'fav.ico') }}"/>
+</head>
+
+
+<div class="grid-container">
+  <div class="grid-item">
+    <a href="http://maps.google.com/maps?q={{latitude | safe}},{{longitude | safe}}">
+      <img width="200px" src="{{ url_for('static', filename = 'googlemaps.png') }}" alt="">
+    </a>
+  </div>
+
+  <div class="grid-item"><a
+      href="http://www.openstreetmap.org/?mlat={{latitude | safe}}&mlon={{longitude | safe}}&zoom=16">
+      <img width="200px"
+        src="{{ url_for('static', filename = 'openstreetmap.png') }}"
+        alt="">
+    </a></div>
+  <div class="grid-item"><a
+      href="https://duckduckgo.com/?q={{latitude | safe}}%2C+{{longitude | safe}}&ia=web&iaxm=maps">
+      <img width="200px" src="{{ url_for('static', filename = 'duckduckgo.jpg') }}" alt="">
+    </a></div>
+  <div class="grid-item"><a
+      href="https://bing.com/maps/default.aspx?cp={{latitude | safe}}~{{longitude | safe}}&lvl=16">
+      <img width="200px"
+        src="{{ url_for('static', filename = 'bing.webp') }}" alt="">
+    </a></div>
+  <div class="grid-item">
+    <a
+      href="magicearth://?open_map&lat={{latitude | safe}}&lon={{longitude | safe}}">
+      <img width="200px"
+        src="{{ url_for('static', filename = 'magicearth.jpg') }}" alt="">
+    </a>
+  </div>
+  <div class="grid-item"> </div>
+  <div class="grid-item"> </div>
+  <div class="grid-item"> </div>
+  <div class="grid-item"> </div>
+</div>
+
+
 
 <style>
   .grid-container {
@@ -16,42 +60,6 @@
     text-align: center;
   }
 </style>
-
-<div class="grid-container">
-  <div class="grid-item">
-    <a href="http://maps.google.com/maps?q={{latitude | safe}},{{longitude | safe}}">
-      <img width="200px" src="https://cdn.icon-icons.com/icons2/2108/PNG/512/google_maps_icon_130921.png" alt="">
-    </a>
-  </div>
-
-  <div class="grid-item"><a
-      href="http://www.openstreetmap.org/?mlat={{latitude | safe}}&mlon={{longitude | safe}}&zoom=16">
-      <img width="200px"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/OpenStreetMap-Logo-2006.svg/768px-OpenStreetMap-Logo-2006.svg.png"
-        alt="">
-    </a></div>
-  <div class="grid-item"><a
-      href="https://duckduckgo.com/?q={{latitude | safe}}%2C+{{longitude | safe}}&ia=web&iaxm=maps">
-      <img width="200px" src="https://icon-library.com/images/google-maps-app-icon/google-maps-app-icon-8.jpg" alt="">
-    </a></div>
-  <div class="grid-item"><a
-      href="https://bing.com/maps/default.aspx?cp={{latitude | safe}}~{{longitude | safe}}&lvl=16">
-      <img width="200px"
-        src="https://news.thewindowsclub.com/wp-content/uploads/2020/10/Bing-Logo.png?ezimgfmt=ng:webp/ngcb181" alt="">
-    </a></div>
-  <div class="grid-item">
-    <a
-      href="magicearth://?open_map&lat={{latitude | safe}}&lon={{longitude | safe}}">
-      <img width="200px"
-        src="https://www.magicearth.com/wp-content/uploads/revslider/slider6/ME_Icon.png" alt="">
-    </a>
-  </div>
-  <div class="grid-item"> </div>
-  <div class="grid-item"> </div>
-  <div class="grid-item"> </div>
-  <div class="grid-item"> </div>
-</div>
-
 
 
 </html>
