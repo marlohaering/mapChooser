@@ -31,12 +31,22 @@
     </a></div>
   <div class="grid-item">
     <a
-      href="magicearth://?open_map&lat={{latitude | safe}}&lon={{longitude | safe}}">
+      href="magicearth://?lat={{latitude | safe}}&lon={{longitude | safe}}">
       <img width="200px"
         src="{{ url_for('static', filename = 'magicearth.jpg') }}" alt="">
     </a>
   </div>
-  <div class="grid-item"> </div>
+  <div class="grid-item">
+    
+    <a
+      href="https://wego.here.com/?map={{latitude | safe}},{{longitude | safe}},18,normal">
+      <img width="200px"
+        src="{{ url_for('static', filename = 'herewego.jpeg') }}" alt="">
+    </a>
+
+    
+
+  </div>
   <div class="grid-item"> </div>
   <div class="grid-item"> </div>
   <div class="grid-item"> </div>
